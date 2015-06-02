@@ -36,7 +36,7 @@ class CursorFactory implements CursorFactoryInterface
      */
     public function createCursor($queryBuilder, $pageSize = null)
     {
-        if ($pageSize == null) {
+        if (null === $pageSize) {
             $pageSize = $this->pageSize;
         }
 

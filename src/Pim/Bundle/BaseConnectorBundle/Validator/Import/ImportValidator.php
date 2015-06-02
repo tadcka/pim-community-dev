@@ -62,7 +62,7 @@ class ImportValidator implements ImportValidatorInterface
     protected function checkIdentifier($entity, array $columnsInfo, $data)
     {
         $identifier = $this->getIdentifier($columnsInfo, $entity);
-        if (!$identifier) {
+        if (null === $identifier) {
             return;
         }
 

@@ -18,7 +18,7 @@ class ResolveDoctrineTargetRepositoryPass implements CompilerPassInterface
     protected $tag;
 
     /**
-     * @param array $tag tag of the repositories
+     * @param string $tag tag of the repositories
      */
     public function __construct($tag)
     {
