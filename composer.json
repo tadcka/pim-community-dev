@@ -60,7 +60,8 @@
         "symfony/swiftmailer-bundle": "2.3.8",
         "symfony/symfony": "2.3.23",
         "twig/extensions": "1.0.1",
-        "twig/twig": "<1.18.1"
+        "twig/twig": "<1.18.1",
+        "akeneo/inner-variation-bundle": "dev-master@dev"
     },
     "require-dev": {
         "phpunit/phpunit": "3.7.*",
@@ -89,6 +90,11 @@
             "type": "vcs",
             "url": "https://github.com/akeneo/platform.git",
             "branch": "master"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/akeneo/InnerVariationBundle.git",
+          "branch": "master"
         }
     ],
     "scripts": {

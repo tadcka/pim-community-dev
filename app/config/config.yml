@@ -87,16 +87,30 @@ swiftmailer:
     password:                 "%mailer_password%"
     spool:                    { type: memory }
 
-pim_reference_data:
-    fabrics:
-        class: Acme\Bundle\AppBundle\Entity\Fabric
-        type: multi
-    color:
-        class: Acme\Bundle\AppBundle\Entity\Color
-        type: simple
+#pim_reference_data:
+#    fabrics:
+#        class: Acme\Bundle\AppBundle\Entity\Fabric
+#        type: multi
+#    color:
+#        class: Acme\Bundle\AppBundle\Entity\Color
+#        type: simple
 
 akeneo_storage_utils:
     mapping_overrides:
         -
             original: Pim\Bundle\CatalogBundle\Model\ProductValue
-            override: Acme\Bundle\AppBundle\Model\ProductValue
+            override: Pim\Bundle\InnerVariationBundle\Model\ProductValue
+        -
+            original: Pim\Bundle\CatalogBundle\Entity\Family
+            override: Pim\Bundle\InnerVariationBundle\Entity\Family
+# Product
+#        -
+#            original: Pim\Bundle\CatalogBundle\Model\ProductValue
+#            override: Pim\Bundle\InnerVariationBundle\Model\ProductValue
+#        -
+#            original: Pim\Bundle\InnerVariationBundle\Model\ProductValue
+#            override: Acme\Bundle\AppBundle\Model\ProductValue
+
+
+
+
