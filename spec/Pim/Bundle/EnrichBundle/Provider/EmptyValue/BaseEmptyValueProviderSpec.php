@@ -23,7 +23,7 @@ class BaseEmptyValueProviderSpec extends ObjectBehavior
 
         $attribute->getAttributeType()->willReturn('pim_catalog_text');
         $this->supports($attribute)->shouldReturn(true);
-        $this->getEmptyValue($attribute)->shouldReturn('');
+        $this->getEmptyValue($attribute)->shouldReturn(null);
 
         $attribute->getAttributeType()->willReturn('pim_catalog_boolean');
         $this->supports($attribute)->shouldReturn(true);

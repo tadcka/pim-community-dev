@@ -29,9 +29,6 @@ class BaseEmptyValueProvider implements EmptyValueProviderInterface
             case 'pim_catalog_price_collection':
                 $emptyValue = [];
                 break;
-            case 'pim_catalog_text':
-                $emptyValue = '';
-                break;
             case 'pim_catalog_boolean':
                 $emptyValue = false;
                 break;
