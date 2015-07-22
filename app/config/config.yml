@@ -100,9 +100,9 @@ akeneo_storage_utils:
         -
             original: Pim\Bundle\CatalogBundle\Model\ProductValue
             override: Pim\Bundle\InnerVariationBundle\Model\ProductValue
-        -
-            original: Pim\Bundle\CatalogBundle\Entity\Family
-            override: Pim\Bundle\InnerVariationBundle\Entity\Family
+#        -
+#            original: Pim\Bundle\CatalogBundle\Entity\Family
+#            override: Pim\Bundle\InnerVariationBundle\Entity\Family
 # Product
 #        -
 #            original: Pim\Bundle\CatalogBundle\Model\ProductValue
