@@ -201,9 +201,15 @@ class NavigationContext extends RawMinkContext implements PageObjectAwareInterfa
      */
     public function iAmOnTheEntityEditPage($identifier, $page)
     {
+        echo 'ADRIEN: $identifier = ' . $identifier . PHP_EOL;
+        echo 'ADRIEN: $page = ' . $page . PHP_EOL;
+
         $page = ucfirst($page);
         $getter = sprintf('get%s', $page);
         $entity = $this->getFixturesContext()->$getter($identifier);
+
+        echo 'ADRIEN: $entity ID = ' . $entity->getId() . PHP_EOL;
+
         $this->openPage(sprintf('%s edit', $page), array('id' => $entity->getId()));
     }
 
