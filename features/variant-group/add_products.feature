@@ -49,6 +49,7 @@ Feature: Add products to a variant group
     When I edit the "sandal-white-37" product
     And the history of the product "sandal-white-37" has been built
     And I visit the "History" tab
+    And I refresh the grid
     And I should see history:
       | version | author                                                            | property | value           |
       | 2       | Julia Stark - Julia@example.com (Comes from variant group SANDAL) | groups   | SANDAL          |
