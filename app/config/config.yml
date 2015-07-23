@@ -94,12 +94,12 @@ swiftmailer:
 #    color:
 #        class: Acme\Bundle\AppBundle\Entity\Color
 #        type: simple
-
-akeneo_storage_utils:
-    mapping_overrides:
-        -
-            original: Pim\Bundle\CatalogBundle\Model\ProductValue
-            override: Pim\Bundle\InnerVariationBundle\Model\ProductValue
+#
+#akeneo_storage_utils:
+#    mapping_overrides:
+#        -
+#            original: Pim\Bundle\CatalogBundle\Model\ProductValue
+#            override: Pim\Bundle\InnerVariationBundle\Model\ProductValue
 #        -
 #            original: Pim\Bundle\CatalogBundle\Entity\Family
 #            override: Pim\Bundle\InnerVariationBundle\Entity\Family

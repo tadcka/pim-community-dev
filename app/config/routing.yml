@@ -33,9 +33,9 @@ pim_notification:
 pim_reference_data:
     resource: "@PimReferenceDataBundle/Resources/config/routing.yml"
 
-pim_inner_variation_variation:
-    resource: '@PimInnerVariationBundle/Resources/config/routing/variation.yml'
-    prefix: /configuration/variation
+pim_inner_variation_inner_variation_type:
+    resource: '@PimInnerVariationBundle/Resources/config/routing/inner_variation_type.yml'
+    prefix: /configuration/inner_variation_type
 
 # Oro platform
 
