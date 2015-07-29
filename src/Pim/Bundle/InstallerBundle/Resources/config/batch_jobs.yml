@@ -10,7 +10,7 @@ connector:
                     title: pim_connector.jobs.fixtures_category_csv.validation.title
                     class: %pim_connector.step.validator.class%
                     services:
-                        charsetValidator: pim_connector.validator.step.charset_validator
+                        charsetValidator: pim_connector.validator.item.charset_validator
                 import:
                     title:     pim_installer.jobs.fixtures_category_csv.import.title
                     services:
@@ -28,7 +28,7 @@ connector:
                     title: pim_connector.jobs.fixtures_attribute_group_yml.validation.title
                     class: %pim_connector.step.validator.class%
                     services:
-                        charsetValidator: pim_connector.validator.step.charset_validator
+                        charsetValidator: pim_connector.validator.item.charset_validator
                 import:
                     title:     pim_installer.jobs.fixtures_attribute_group_yml.import.title
                     services:
@@ -44,7 +44,7 @@ connector:
                     title: pim_connector.jobs.fixtures_channel_yml.validation.title
                     class: %pim_connector.step.validator.class%
                     services:
-                        charsetValidator: pim_connector.validator.step.charset_validator
+                        charsetValidator: pim_connector.validator.item.charset_validator
                 import:
                     title:     pim_installer.jobs.fixtures_channel_yml.import.title
                     services:
@@ -60,7 +60,7 @@ connector:
                     title: pim_connector.jobs.fixtures_group_type_yml.validation.title
                     class: %pim_connector.step.validator.class%
                     services:
-                        charsetValidator: pim_connector.validator.step.charset_validator
+                        charsetValidator: pim_connector.validator.item.charset_validator
                 import:
                     title:     pim_installer.jobs.fixtures_group_type_yml.import.title
                     services:
@@ -76,7 +76,7 @@ connector:
                     title: pim_connector.jobs.fixtures_association_type_csv.validation.title
                     class: %pim_connector.step.validator.class%
                     services:
-                        charsetValidator: pim_connector.validator.step.charset_validator
+                        charsetValidator: pim_connector.validator.item.charset_validator
                 import:
                     title:     pim_installer.jobs.fixtures_association_type_csv.import.title
                     services:
@@ -92,7 +92,7 @@ connector:
                     title: pim_connector.jobs.fixtures_attribute_csv.validation.title
                     class: %pim_connector.step.validator.class%
                     services:
-                        charsetValidator: pim_connector.validator.step.charset_validator
+                        charsetValidator: pim_connector.validator.item.charset_validator
                 import:
                     title:     pim_connector.jobs.csv_attribute_import.import.title
                     services:
@@ -108,7 +108,7 @@ connector:
                     title: pim_connector.jobs.fixtures_attribute_options_csv.validation.title
                     class: %pim_connector.step.validator.class%
                     services:
-                        charsetValidator: pim_connector.validator.step.charset_validator
+                        charsetValidator: pim_connector.validator.item.charset_validator
                 import:
                     title:     pim_installer.jobs.fixtures_attribute_options_csv.import.title
                     services:
@@ -124,7 +124,7 @@ connector:
                     title: pim_connector.jobs.fixtures_family_csv.validation.title
                     class: %pim_connector.step.validator.class%
                     services:
-                        charsetValidator: pim_connector.validator.step.charset_validator
+                        charsetValidator: pim_connector.validator.item.charset_validator
                 import:
                     title:     pim_installer.jobs.fixtures_family_csv.import.title
                     services:
@@ -140,7 +140,7 @@ connector:
                     title: pim_connector.jobs.fixtures_variant_group_csv.validation.title
                     class: %pim_connector.step.validator.class%
                     services:
-                        charsetValidator: pim_connector.validator.step.charset_validator
+                        charsetValidator: pim_connector.validator.item.charset_validator
                 import:
                     title:     pim_installer.jobs.fixtures_variant_group_csv.import.title
                     services:
@@ -156,7 +156,7 @@ connector:
                     title: pim_connector.jobs.fixtures_product_csv.validation.title
                     class: %pim_connector.step.validator.class%
                     services:
-                        charsetValidator: pim_connector.validator.step.charset_validator
+                        charsetValidator: pim_connector.validator.item.charset_validator
                 import:
                     title:     pim_connector.jobs.csv_product_import.import.title
                     services:
@@ -178,7 +178,7 @@ connector:
                     title: pim_connector.jobs.fixtures_job_yml.validation.title
                     class: %pim_connector.step.validator.class%
                     services:
-                        charsetValidator: pim_connector.validator.step.charset_validator
+                        charsetValidator: pim_connector.validator.item.charset_validator
                 import:
                     title:     pim_installer.jobs.fixtures_job_yml.import.title
                     services:
@@ -194,7 +194,7 @@ connector:
                     title: pim_connector.jobs.fixtures_group_csv.validation.title
                     class: %pim_connector.step.validator.class%
                     services:
-                        charsetValidator: pim_connector.validator.step.charset_validator
+                        charsetValidator: pim_connector.validator.item.charset_validator
                 import:
                     title:     pim_installer.jobs.fixtures_group_csv.import.title
                     services:
