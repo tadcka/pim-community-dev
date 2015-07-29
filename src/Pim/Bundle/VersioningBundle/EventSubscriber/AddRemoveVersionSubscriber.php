@@ -87,12 +87,12 @@ class AddRemoveVersionSubscriber implements EventSubscriberInterface
         }
 
         $previousVersion = $this->versionRepository->getNewestLogEntry(
-            ClassUtils::getClass($event->getSubject()),
+            ClassUtils::getRealClass(ClassUtils::getClass($event->getSubject())),
             $event->getSubjectId()
         );
 
         $version = $this->versionFactory->create(
-            ClassUtils::getClass($event->getSubject()),
+            ClassUtils::getRealClass(ClassUtils::getClass($event->getSubject())),
             $event->getSubjectId(),
             $author,
             'Deleted'

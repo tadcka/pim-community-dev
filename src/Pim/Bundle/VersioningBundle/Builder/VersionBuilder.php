@@ -76,7 +76,7 @@ class VersionBuilder
     public function createPendingVersion($versionable, $author, array $changeset, $context = null)
     {
         $version = $this->versionFactory->create(
-            ClassUtils::getClass($versionable),
+            ClassUtils::getRealClass(ClassUtils::getClass($versionable)),
             $versionable->getId(),
             $author,
             $context

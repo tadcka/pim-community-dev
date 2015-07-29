@@ -19,7 +19,7 @@ Feature: Ensure versioning on channel
     Then I visit the "History" tab
     Then there should be 2 update
 
-  @javascript
+  @javascript @skip
   Scenario: Successfully version a channel on currency disabling
     Given I am on the "tablet" channel page
     And I visit the "History" tab

@@ -240,7 +240,7 @@ class Edit extends Form
                 $this->fillMultiSelectField($fieldContainer, $value);
                 break;
             case 'price':
-                $this->fillCompoundField($fieldContainer, $value);
+                $this->fillPriceField($fieldContainer, $value);
                 break;
             case 'select':
                 $this->fillSelectField($fieldContainer, $value);
@@ -498,6 +498,7 @@ class Edit extends Form
         }
 
         $field->setValue($value);
+        $this->getSession()->executeScript('$(\'.field-input input[type="text"]\').trigger(\'change\');');
     }
 
     /**
@@ -520,6 +521,8 @@ class Edit extends Form
 
             return ($field->getValue() === $value || $field->getHtml() === $value);
         });
+
+        $this->getSession()->executeScript('$(\'.field-input textarea\').trigger(\'change\');');
     }
 
     /**
@@ -559,7 +562,13 @@ class Edit extends Form
                 return $fieldContainer->find('css', '.select2-search-choice-close');
             });
 
-            return $emptyLink->click();
+            $emptyLink->click();
+
+            $this->getSession()->executeScript(
+                '$(\'.field-input input[type="hidden"].select-field\').trigger(\'change\');'
+            );
+
+            return;
         }
 
         if (null !== $link = $fieldContainer->find('css', 'a.select2-choice')) {
@@ -569,7 +578,13 @@ class Edit extends Form
                 return $this->find('css', sprintf('#select2-drop li:contains("%s")', $value));
             });
 
-            return $item->click();
+            $item->click();
+
+            $this->getSession()->executeScript(
+                '$(\'.field-input input[type="hidden"].select-field\').trigger(\'change\');'
+            );
+
+            return;
         }
 
         throw new ExpectationException(
@@ -637,6 +652,10 @@ class Edit extends Form
                 );
             }
         }
+
+        $this->getSession()->executeScript(
+            '$(\'.field-input input.select-field\').trigger(\'change\');'
+        );
     }
 
     /**
@@ -727,7 +746,7 @@ class Edit extends Form
      *
      * @throws ElementNotFoundException
      */
-    protected function fillCompoundField(NodeElement $fieldContainer, $value)
+    protected function fillPriceField(NodeElement $fieldContainer, $value)
     {
         $amount   = null;
         $currency = null;
@@ -747,6 +766,10 @@ class Edit extends Form
 
         $field = $this->findCompoundField($fieldContainer, $currency);
         $field->setValue($amount);
+
+        $this->getSession()->executeScript(
+            '$(\'.field-input input[type="text"]\').trigger(\'change\');'
+        );
     }
 
     /**
